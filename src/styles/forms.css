@@ -1,0 +1,27 @@
+.field-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: var(--vspace) 0;
+}
+
+.field-container-column {
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--vspace) 0;
+}
+
+.column {
+  flex: 1;
+}
+
+.field-container .column:first-child {
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.field-container .column:last-child {
+  justify-content: flex-end;
+}

@@ -1,0 +1,46 @@
+.popup-outer-container {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.15);
+  border-top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height));
+  justify-content: center;
+  overflow-y: scroll;
+  padding: var(--vspace) var(--hspace);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.popup-inner-container {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px 3px rgba(119, 119, 119, 0.35);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(119, 119, 119, 0.35);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(119, 119, 119, 0.35);
+  max-width: var(--max-content-width);
+  padding: var(--vspace) var(--hspace);
+  position: relative;
+  width: 100%;
+}
+
+.popup-inner-container:focus-within {
+  outline: -webkit-focus-ring-color auto 2px;
+}
+
+.close-icon {
+  background: var(--main-white);
+  color: #6e6e6e;
+  cursor: pointer;
+  font: 2rem/1 var(--main-font);
+  position: absolute;
+  right: calc(2 * var(--hspace));
+  top: 1rem;
+}
+
+.popup-inner-container .btns-container {
+  margin-bottom: 0;
+}

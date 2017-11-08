@@ -1,0 +1,54 @@
+.btns-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: var(--base-radius);
+  cursor: pointer;
+  display: inline-block;
+  padding: var(--vspace) calc(var(--hspace) * 2);
+  font: 1.25/1 var(--primary-font);
+  margin-right: var(--hspace);
+  min-width: 165px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn:last-child {
+  margin-right: 0;
+}
+
+.btn.primary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.btn.secondary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn.tertiary {
+  background: var(--tertiary-color);
+  color: #fff;
+}
+
+.btn.link {
+  border: none;
+  background: transparent;
+  color: var(--secondary-color);
+  display: inline;
+  font: 1rem/1 var(--primary-font);
+  padding: 0 0.5rem;
+  text-align: left;
+  text-decoration: underline;
+}

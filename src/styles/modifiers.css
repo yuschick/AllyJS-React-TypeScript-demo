@@ -1,0 +1,48 @@
+.is-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.is-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.is-strong {
+  font-weight: 700;
+}
+
+.is-accent-text {
+  color: var(--secondary-color);
+}
+
+.is-required:after {
+  color: var(--error-red);
+  content: '*';
+  display: inline-block;
+  margin-left: calc(var(--hspace) / 2);
+}
+
+.has-spacer:before {
+  background: var(--border-color);
+  content: '';
+  display: block;
+  height: 1px;
+  margin: calc(var(--vspace) * 2) 0;
+  width: 100%;
+}
+
+.has-text-centered {
+  text-align: center;
+}
