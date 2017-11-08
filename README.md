@@ -6,6 +6,8 @@ Accessibility is an aspect of web development that is often overlooked, at least
 
 ## [View the Demo](http://yuschick.github.io/AllyJS-React-TypeScript-demo)
 
+[![Ally.JS with React & TypeScript](https://github.com/yuschick/AllyJS-React-TypeScript-demo/raw/master/src/images/screenshot.jpg)](http://yuschick.github.io/AllyJS-React-TypeScript-demo)
+
 ## Project
 
 This project is a quick demo integrating Ally.js with React and TypeScript to build an accessible dialog window component.
