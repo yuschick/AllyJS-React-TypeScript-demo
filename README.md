@@ -4,6 +4,8 @@ Accessibility is an aspect of web development that is often overlooked, at least
 
 > A responsive app should be one that delivers its content based on the needs of the user, not only their device.
 
+## [View the Demo](http://yuschick.github.io/AllyJS-React-TypeScript-demo)
+
 ## Project
 
 This project is a quick demo integrating Ally.js with React and TypeScript to build an accessible dialog window component.
