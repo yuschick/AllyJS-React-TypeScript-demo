@@ -5,12 +5,15 @@ import Dialog from './../../components/Dialog';
 
 import './styles.css';
 
-class App extends React.Component {
-  // tslint:disable-next-line:no-any
-  state: any;
+interface AppState {
+  showDialog: boolean;
+}
 
-  constructor() {
-    super();
+class App extends React.Component<{}, AppState> {
+  state: AppState;
+
+  constructor(props: {}) {
+    super(props);
 
     this.state = {
       showDialog: false

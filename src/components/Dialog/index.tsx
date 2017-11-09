@@ -11,32 +11,38 @@ interface Props {
   children: object;
   title: string;
   description: string;
-  close: Function;
+  close(): void;
 }
 
-class Dialog extends React.Component<Props> {
-  // tslint:disable-next-line:no-any
-  dialog: any = null;
-  // tslint:disable-next-line:no-any
-  disabledHandle: any = null;
-  // tslint:disable-next-line:no-any
-  focusHandle: any = null;
-  // tslint:disable-next-line:no-any
-  keyHandle: any = null;
-  // tslint:disable-next-line:no-any
-  focusedElementBeforeDialogOpened: any = null;
+interface Handle {
+  disengage(): void;
+}
+
+class Dialog extends React.Component<Props, {}> {
+  dialog: HTMLElement | null;
+  disabledHandle: Handle;
+  focusHandle: Handle;
+  keyHandle: Handle;
+  focusedElementBeforeDialogOpened: HTMLInputElement | HTMLButtonElement;
 
   componentDidMount() {
-    this.focusedElementBeforeDialogOpened = document.activeElement;
+    if (document.activeElement instanceof HTMLInputElement ||
+      document.activeElement instanceof HTMLButtonElement) {
+      this.focusedElementBeforeDialogOpened = document.activeElement;
+    }
+
     this.disabledHandle = Disabled({
       filter: this.dialog,
     });
+
     this.focusHandle = TabFocus({
       context: this.dialog,
     });
+
     this.keyHandle = Key({
       escape: () => { this.props.close(); },
     });
+
     let element = FirstTab({
       context: this.dialog,
       defaultToContext: true,
