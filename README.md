@@ -10,4 +10,9 @@ Accessibility is an aspect of web development that is often overlooked. I would 
 
 ## Project
 
-This project is a quick demo integrating Ally.js with React and TypeScript to build an accessible dialog window component.
+
+### One of the most common pain points regarding accessibility is dialog windows. 
+
+There’re a lot of considerations to take in terms of communicating to the user about the dialog itself, ensuring ease of access to its content, and returning to the dialog’s trigger upon close.
+
+A demo on the Ally.js website addresses this challenge which helped me port its logic to my current project which uses React and TypeScript. This project is a demo of an accessible dialog component using Ally.js within React with TypeScript.
