@@ -6,7 +6,7 @@ Accessibility is an aspect of web development that is often overlooked. I would 
 
 ## [View the Demo](http://yuschick.github.io/AllyJS-React-TypeScript-demo)
 
-[![Ally.JS with React & TypeScript](https://github.com/yuschick/AllyJS-React-TypeScript-demo/raw/master/src/images/screenshot.jpg)](http://yuschick.github.io/AllyJS-React-TypeScript-demo)
+[![Ally.JS with React & TypeScript](https://github.com/yuschick/AllyJS-React-TypeScript-demo/raw/master/src/images/dialog-demo.gif)](http://yuschick.github.io/AllyJS-React-TypeScript-demo)
 
 ## Project
 
