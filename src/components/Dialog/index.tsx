@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import Disabled from 'ally.js/esm/maintain/disabled';
-import TabFocus from 'ally.js/esm/maintain/tab-focus';
-import Key from 'ally.js/esm/when/key';
-import FirstTab from 'ally.js/esm/query/first-tabbable';
+import Disabled from 'ally.js/maintain/disabled';
+import TabFocus from 'ally.js/maintain/tab-focus';
+import Key from 'ally.js/when/key';
+import FirstTab from 'ally.js/query/first-tabbable';
 
 import './styles.css';
 
@@ -49,7 +49,7 @@ class Dialog extends React.Component<Props, {}> {
     });
     element.focus();
   }
-  
+
   componentWillUnmount() {
     this.disabledHandle.disengage();
     this.focusHandle.disengage();
@@ -71,13 +71,13 @@ class Dialog extends React.Component<Props, {}> {
           }
         }
       >
-        <h5 
+        <h5
           id="dialog-title"
           className="is-visually-hidden"
         >
           {this.props.title}
         </h5>
-        <p 
+        <p
           id="dialog-description"
           className="is-visually-hidden"
         >
@@ -88,7 +88,7 @@ class Dialog extends React.Component<Props, {}> {
             className="close-icon"
             tabIndex={0}
             type="button"
-            title="Close Dialog"
+            aria-label="Close Dialog"
             onClick={() => {
               this.props.close();
             }}
