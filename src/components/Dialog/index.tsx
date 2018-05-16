@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
 import Disabled from 'ally.js/maintain/disabled';
 import TabFocus from 'ally.js/maintain/tab-focus';
@@ -24,6 +25,8 @@ class Dialog extends React.Component<Props, {}> {
   focusHandle: Handle;
   keyHandle: Handle;
   focusedElementBeforeDialogOpened: HTMLInputElement | HTMLButtonElement;
+  container: HTMLElement = document.createElement('div');
+  target: HTMLElement = document.getElementById('root')!;
 
   componentDidMount() {
     if (document.activeElement instanceof HTMLInputElement ||
@@ -48,6 +51,8 @@ class Dialog extends React.Component<Props, {}> {
       defaultToContext: true,
     });
     element.focus();
+
+    this.target.appendChild(this.container);
   }
 
   componentWillUnmount() {
@@ -55,10 +60,11 @@ class Dialog extends React.Component<Props, {}> {
     this.focusHandle.disengage();
     this.keyHandle.disengage();
     this.focusedElementBeforeDialogOpened.focus();
+    this.target.removeChild(this.container);
   }
 
   render() {
-    return (
+    return ReactDOM.createPortal(
       <div
         role="dialog"
         tabIndex={0}
@@ -97,7 +103,8 @@ class Dialog extends React.Component<Props, {}> {
           </button>
           {this.props.children}
         </div>
-      </div>
+      </div>,
+      this.container
     );
   }
 }
